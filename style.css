@@ -1,13 +1,14 @@
 body{
-    background-color: #FFFFFF;
-    margin: 30px 0;
+    font-family: "Inter", sans-serif;
+    background-color: beige;
+    margin: 1.875em 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .main-container{
-    width: 550px;
+    width: 95vw;
     height: auto;
     background-color: #1F2937;
     border-radius: 10px;
@@ -30,7 +31,7 @@ form{
 }
 
 input[type="color"]{
-    width: 61px;
+    width: 11%;
     height: 43px;
     padding: 0;
     cursor: pointer;
@@ -48,18 +49,32 @@ input[type="color"]::-webkit-color-swatch-wrapper{
 
 select{
     background-color: #1F293A;
-    width: 312px;
+    width: 56.7%;
     height: 42px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
     border: 1px solid #D1D5DB;
     color: #D1D5DB;
-    padding: 9px 13px;
+    padding: 0.5625empx 0.8125em;
     box-shadow: 0 1px 2px 0 #0000000D;
     border-radius: 6px;
     cursor: pointer;
 }
+
+option[value="monochrome"]{
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+}
+
+
 button{
     background-color: #3D4B60;
-    width: 123px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    width: 23%;
     height: 42px;
     border-radius: 4px;
     box-shadow: 0 1px 2px 0 #0000000D;
@@ -76,13 +91,16 @@ button{
 }
  
 img{
-    width: 110px;
+    width: 20%;
     height: 550px;
 } 
 
 footer{
     width: 100%;
     height: 46px;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.5;
     background-color: #1F2937;
     color: #D5D4D8;
     display: flex;
