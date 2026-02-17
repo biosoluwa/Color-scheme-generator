@@ -2,10 +2,16 @@ const form = document.querySelector("form")
 
 form.addEventListener('submit', function(e){
       e.preventDefault()
-    //   form.reset()
       fetchColorScheme()
-      
 })
+
+document.addEventListener('click', function(e){
+      if(e.target.dataset.clr){
+        copyHexCode(e.target.dataset.clr)
+      }
+})
+
+
 
 function fetchColorScheme(){
     const color = document.getElementById("color-input").value
@@ -24,7 +30,7 @@ function displayColorScheme(data){
     let eachColor = ''
 
         data.colors.forEach(function(color){
-             eachColor += `<img src="${color.image.bare}"/>`
+             eachColor += `<img src="${color.image.bare}" data-clr="${color.hex.value}"/>`
         })
          document.getElementById("display-colors").innerHTML = eachColor
 }
@@ -32,9 +38,14 @@ function displayColorScheme(data){
 function displayHexValue(data){
     let eachHex = ''
     data.colors.forEach(function(color){
-         eachHex += `<p>${color.hex.value}</p>`
+         eachHex += `<p data-clr="${color.hex.value}">${color.hex.value}</p>`
     })
     document.getElementById("footer").innerHTML = eachHex
+}
+
+function copyHexCode(clr){
+   navigator.clipboard.writeText(clr)
+   alert('hex copied: ' + clr)
 }
 
 
