@@ -95,7 +95,7 @@ button{
 .display-colors{
     display: flex;
     width: 100%;
-    align-items: center;
+    height: 550px;
     justify-content: center;
     margin-bottom: 0;
 }
