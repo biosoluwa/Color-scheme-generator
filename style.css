@@ -129,4 +129,5 @@ footer{
     color: #D5D4D8;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
